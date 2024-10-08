@@ -1,0 +1,50 @@
+{
+  "name": "node-zoho",
+  "version": "0.0.39",
+  "description": "Simple Zoho integrations for Node.js",
+  "keywords": [
+    "zoho",
+    "node"
+  ],
+  "main": "build/node-zoho",
+  "private": false,
+  "homepage": "https://github.com/ahmader/node-zoho",
+  "bugs": "https://github.com/ahmader/node-zoho/issues",
+  "license": "MIT",
+  "author": "Ahmader <ahmader@amozun.com>",
+  "contributors": [
+    "Picatic E-Tickets Inc. <api@picatic.com>"
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ahmader/node-zoho.git"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "coffeescript": "^2.2.1",
+    "content-disposition": "^0.5.2",
+    "request": "^2.83.0",
+    "underscore": "^1.8.3",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-plugin-coffeescript": "^0.2.1",
+    "grunt": "^1.0.2",
+    "grunt-bump": "^0.8.0",
+    "grunt-coffeelint": "0.0.16",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jasmine-bundle": "^0.4.0",
+    "grunt-jasmine-node": "^0.3.1",
+    "grunt-shrinkwrap": "^1.1.1",
+    "gruntify-eslint": "^4.0.0"
+  },
+  "scripts": {
+    "prepare": "coffee --bare --compile --output build lib",
+    "lint": "eslint lib/ --ext .coffee",
+    "test": "grunt travis-ci"
+  }
+}
